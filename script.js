@@ -785,14 +785,28 @@ document.addEventListener("DOMContentLoaded", () => {
                     const card =
                         buyButton.closest(".product-card");
 
+                    if (!card) return;
+
                     const productName =
-                        card?.querySelector("h3")
+                        card.dataset.name ||
+                        card.querySelector("h3")
                             ?.textContent.trim() ||
                         "Product";
 
-                    showToast(
-                        `${productName} selected. Checkout is not connected yet.`
+                    const productPrice =
+                        Number(card.dataset.price || 0);
+
+                    const orderItem = {
+                        name: productName,
+                        price: productPrice
+                    };
+
+                    localStorage.setItem(
+                        "orderItem",
+                        JSON.stringify(orderItem)
                     );
+
+                    window.location.href = "order.html";
 
                 }
 
