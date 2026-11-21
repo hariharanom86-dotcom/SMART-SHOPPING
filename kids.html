@@ -1,0 +1,1231 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kids Collection | SMART SHOPPING</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Notification Popup -->
+    <div class="notification-popup" id="notification-popup">
+
+        <p>Welcome to SMART SHOPPING! Enjoy exclusive offers.</p>
+
+        <button id="closeNotification">×</button>
+
+    </div>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        Free Shipping on Orders Above ₹999
+    </div>
+
+    <!-- Offer Bar -->
+    <div class="offer-bar">
+        SPECIAL OFFERS ON KIDS COLLECTION
+    </div>
+
+    <!-- Main Navbar -->
+    <header class="main-navbar">
+
+        <div class="logo">
+            <a href="index.html">SMART SHOPPING</a>
+        </div>
+
+        <nav class="navigation">
+
+            <ul>
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li class="shop-menu">
+
+                    <button
+                        aria-controls="shopDropdown"
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        class="shop-toggle"
+                        id="shopToggle"
+                        type="button">
+
+                        Shop
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </button>
+
+                    <ul class="dropdown-menu" id="shopDropdown">
+
+                        <li>
+                            <a href="men.html">Men</a>
+                        </li>
+
+                        <li>
+                            <a href="woman.html">Women</a>
+                        </li>
+
+                        <li>
+                            <a href="kids.html">Kids</a>
+                        </li>
+
+                        <li>
+                            <a href="accessories.html">Accessories</a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li>
+                    <a href="#">About</a>
+                </li>
+
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <div class="navbar-actions">
+
+            <div class="navbar-search">
+
+                <input
+                    id="searchInput"
+                    placeholder="Search products..."
+                    type="text">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+            </div>
+
+            <div class="navbar-icons">
+
+                <a class="wishlist-icon" href="#">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                    <span id="wishlistCount">0</span>
+
+                </a>
+
+                <a class="cart-icon" href="#">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    <span id="cartCount">0</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- Collection Banner -->
+    <section class="collection-banner kids-banner">
+
+        <div class="banner-content">
+
+            <p class="banner-subtitle">
+                SMART SHOPPING COLLECTION
+            </p>
+
+            <h1>Kids Collection</h1>
+
+            <p>
+                Comfortable, Cute and Stylish Outfits for Little Ones
+            </p>
+
+            <a class="banner-button" href="#products">
+                Shop Now
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- Main Shop Section -->
+    <main class="shop-container" id="products">
+
+        <section class="shop-heading">
+
+            <h2>Kids Fashion</h2>
+
+            <p>
+                Explore adorable outfits for boys and girls.
+            </p>
+
+        </section>
+
+        <div class="shop-layout">
+
+            <!-- Filter Sidebar -->
+            <aside class="filter-sidebar">
+
+                <div class="filter-heading">
+
+                    <h3>Filters</h3>
+
+                    <button id="clearFilters">
+                        Clear All
+                    </button>
+
+                </div>
+
+                <!-- Category Filter -->
+                <div class="filter-group">
+
+                    <h4>Category</h4>
+
+                    <label>
+                        <input
+                            class="category-filter"
+                            type="checkbox"
+                            value="boys-shirts">
+                        Boys Shirts
+                    </label>
+
+                    <label>
+                        <input
+                            class="category-filter"
+                            type="checkbox"
+                            value="boys-tshirts">
+                        Boys T-Shirts
+                    </label>
+
+                    <label>
+                        <input
+                            class="category-filter"
+                            type="checkbox"
+                            value="boys-pants">
+                        Boys Pants
+                    </label>
+
+                    <label>
+                        <input
+                            class="category-filter"
+                            type="checkbox"
+                            value="boys-jeans">
+                        Boys Jeans
+                    </label>
+
+                    <label>
+                        <input
+                            class="category-filter"
+                            type="checkbox"
+                            value="girls-dresses">
+                        Girls Dresses
+                    </label>
+
+                    <label>
+                        <input
+                            class="category-filter"
+                            type="checkbox"
+                            value="girls-frocks">
+                        Girls Frocks
+                    </label>
+
+                    <label>
+                        <input
+                            class="category-filter"
+                            type="checkbox"
+                            value="girls-tops">
+                        Girls Tops
+                    </label>
+
+                    <label>
+                        <input
+                            class="category-filter"
+                            type="checkbox"
+                            value="kids-sets">
+                        Kids Sets
+                    </label>
+
+                </div>
+
+                <!-- Price Filter -->
+                <div class="filter-group">
+
+                    <h4>Price Range</h4>
+
+                    <input
+                        id="priceRange"
+                        max="3000"
+                        min="200"
+                        type="range"
+                        value="3000">
+
+                    <p>
+                        Maximum Price: ₹<span id="priceValue">3000</span>
+                    </p>
+
+                </div>
+
+                <!-- Colour Filter -->
+                <div class="filter-group">
+
+                    <h4>Colour</h4>
+
+                    <label>
+                        <input
+                            class="color-filter"
+                            type="checkbox"
+                            value="black">
+                        Black
+                    </label>
+
+                    <label>
+                        <input
+                            class="color-filter"
+                            type="checkbox"
+                            value="white">
+                        White
+                    </label>
+
+                    <label>
+                        <input
+                            class="color-filter"
+                            type="checkbox"
+                            value="blue">
+                        Blue
+                    </label>
+
+                    <label>
+                        <input
+                            class="color-filter"
+                            type="checkbox"
+                            value="red">
+                        Red
+                    </label>
+
+                    <label>
+                        <input
+                            class="color-filter"
+                            type="checkbox"
+                            value="pink">
+                        Pink
+                    </label>
+
+                    <label>
+                        <input
+                            class="color-filter"
+                            type="checkbox"
+                            value="yellow">
+                        Yellow
+                    </label>
+
+                    <label>
+                        <input
+                            class="color-filter"
+                            type="checkbox"
+                            value="green">
+                        Green
+                    </label>
+
+                </div>
+
+                <!-- Size Filter -->
+                <div class="filter-group">
+
+                    <h4>Size</h4>
+
+                    <label>
+                        <input
+                            class="size-filter"
+                            type="checkbox"
+                            value="2-3Y">
+                        2-3 Years
+                    </label>
+
+                    <label>
+                        <input
+                            class="size-filter"
+                            type="checkbox"
+                            value="4-5Y">
+                        4-5 Years
+                    </label>
+
+                    <label>
+                        <input
+                            class="size-filter"
+                            type="checkbox"
+                            value="6-7Y">
+                        6-7 Years
+                    </label>
+
+                    <label>
+                        <input
+                            class="size-filter"
+                            type="checkbox"
+                            value="8-9Y">
+                        8-9 Years
+                    </label>
+
+                    <label>
+                        <input
+                            class="size-filter"
+                            type="checkbox"
+                            value="10-12Y">
+                        10-12 Years
+                    </label>
+
+                </div>
+
+            </aside>
+
+            <!-- Products Section -->
+            <section class="products-area">
+
+                <div class="products-toolbar">
+
+                    <p id="productCount">
+                        Showing
+                        <span class="count-number">12</span>
+                        of 12 products
+                    </p>
+
+                    <select id="sortSelect">
+
+                        <option value="default">
+                            Recommended
+                        </option>
+
+                        <option value="low-high">
+                            Price: Low to High
+                        </option>
+
+                        <option value="high-low">
+                            Price: High to Low
+                        </option>
+
+                        <option value="name">
+                            Name: A to Z
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <!-- Product Grid -->
+                <div class="product-grid" id="productGrid">
+
+                    <!-- Product 1 -->
+                    <article
+                        class="product-card"
+                        data-category="boys-shirts"
+                        data-color="blue"
+                        data-name="Boys Blue Casual Shirt"
+                        data-price="799"
+                        data-size="4-5Y,6-7Y,8-9Y">
+
+                        <div class="product-image">
+
+                            <img
+                                alt="Boys Blue Shirt"
+                                loading="lazy"
+                                src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=900&q=90">
+
+                            <span class="discount-tag">
+                                15% OFF
+                            </span>
+
+                            <button
+                                aria-label="Add to wishlist"
+                                class="wishlist-btn"
+                                type="button">
+
+                                <i class="fa-regular fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+                        <div class="product-details">
+
+                            <p class="product-category">
+                                Boys Shirts
+                            </p>
+
+                            <h3>Boys Blue Casual Shirt</h3>
+
+                            <div class="rating">
+                                ★★★★☆ (4.4)
+                            </div>
+
+                            <p class="product-price">
+                                ₹799 <del>₹949</del>
+                            </p>
+
+                            <div class="product-buttons">
+
+                                <button class="add-cart" type="button">
+                                    Add to Cart
+                                </button>
+
+                                <button class="buy-now" type="button">
+                                    Buy Now
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Product 2 -->
+                    <article
+                        class="product-card"
+                        data-category="boys-tshirts"
+                        data-color="white"
+                        data-name="Boys White T-Shirt"
+                        data-price="499"
+                        data-size="2-3Y,4-5Y,6-7Y">
+
+                        <div class="product-image">
+
+                           <img
+  src="https://www.hanesbrandsinc.jp/img/goods/L/h5380-010-l.jpg"
+  alt="Boys White T-Shirt"
+>
+
+                            <span class="discount-tag">
+                                10% OFF
+                            </span>
+
+                            <button
+                                aria-label="Add to wishlist"
+                                class="wishlist-btn"
+                                type="button">
+
+                                <i class="fa-regular fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+                        <div class="product-details">
+
+                            <p class="product-category">
+                                Boys Tshirts
+                            </p>
+
+                            <h3>Boys White T-Shirt</h3>
+
+                            <div class="rating">
+                                ★★★★☆ (4.2)
+                            </div>
+
+                            <p class="product-price">
+                                ₹499 <del>₹599</del>
+                            </p>
+
+                            <div class="product-buttons">
+
+                                <button class="add-cart" type="button">
+                                    Add to Cart
+                                </button>
+
+                                <button class="buy-now" type="button">
+                                    Buy Now
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Product 3 -->
+                    <article
+                        class="product-card"
+                        data-category="boys-pants"
+                        data-color="black"
+                        data-name="Boys Black Casual Pants"
+                        data-price="699"
+                        data-size="4-5Y,6-7Y,8-9Y">
+
+                        <div class="product-image">
+
+                            <img
+                                alt="Boys Black Pants"
+                                loading="lazy"
+                                src="https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=900&q=90">
+
+                            <span class="discount-tag">
+                                15% OFF
+                            </span>
+
+                            <button
+                                aria-label="Add to wishlist"
+                                class="wishlist-btn"
+                                type="button">
+
+                                <i class="fa-regular fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+                        <div class="product-details">
+
+                            <p class="product-category">
+                                Boys Pants
+                            </p>
+
+                            <h3>Boys Black Casual Pants</h3>
+
+                            <div class="rating">
+                                ★★★★☆ (4.3)
+                            </div>
+
+                            <p class="product-price">
+                                ₹699 <del>₹799</del>
+                            </p>
+
+                            <div class="product-buttons">
+
+                                <button class="add-cart" type="button">
+                                    Add to Cart
+                                </button>
+
+                                <button class="buy-now" type="button">
+                                    Buy Now
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Product 4 -->
+                    <article
+                        class="product-card"
+                        data-category="boys-jeans"
+                        data-color="blue"
+                        data-name="Boys Blue Denim Jeans"
+                        data-price="899"
+                        data-size="6-7Y,8-9Y,10-12Y">
+
+                        <div class="product-image">
+
+                            <img
+                                alt="Boys Blue Jeans"
+                                loading="lazy"
+                                src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=900&q=90">
+
+                            <span class="discount-tag">
+                                20% OFF
+                            </span>
+
+                            <button
+                                aria-label="Add to wishlist"
+                                class="wishlist-btn"
+                                type="button">
+
+                                <i class="fa-regular fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+                        <div class="product-details">
+
+                            <p class="product-category">
+                                Boys Jeans
+                            </p>
+
+                            <h3>Boys Blue Denim Jeans</h3>
+
+                            <div class="rating">
+                                ★★★★☆ (4.5)
+                            </div>
+
+                            <p class="product-price">
+                                ₹899 <del>₹1,099</del>
+                            </p>
+
+                            <div class="product-buttons">
+
+                                <button class="add-cart" type="button">
+                                    Add to Cart
+                                </button>
+
+                                <button class="buy-now" type="button">
+                                    Buy Now
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Product 5 -->
+                    <article
+                        class="product-card"
+                        data-category="girls-dresses"
+                        data-color="pink"
+                        data-name="Girls Pink Party Dress"
+                        data-price="999"
+                        data-size="2-3Y,4-5Y,6-7Y">
+
+                        <div class="product-image">
+
+                            <img
+                                alt="Girls Pink Dress"
+                                loading="lazy"
+                                src="https://images.unsplash.com/photo-1518831959646-742c3a14ebf7?auto=format&fit=crop&w=900&q=90">
+
+                            <span class="discount-tag">
+                                15% OFF
+                            </span>
+
+                            <button
+                                aria-label="Add to wishlist"
+                                class="wishlist-btn"
+                                type="button">
+
+                                <i class="fa-regular fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+                        <div class="product-details">
+
+                            <p class="product-category">
+                                Girls Dresses
+                            </p>
+
+                            <h3>Girls Pink Party Dress</h3>
+
+                            <div class="rating">
+                                ★★★★★ (4.8)
+                            </div>
+
+                            <p class="product-price">
+                                ₹999 <del>₹1,199</del>
+                            </p>
+
+                            <div class="product-buttons">
+
+                                <button class="add-cart" type="button">
+                                    Add to Cart
+                                </button>
+
+                                <button class="buy-now" type="button">
+                                    Buy Now
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Product 6 -->
+                    <article
+                        class="product-card"
+                        data-category="girls-frocks"
+                        data-color="yellow"
+                        data-name="Girls Yellow Frock"
+                        data-price="899"
+                        data-size="2-3Y,4-5Y,6-7Y">
+
+                        <div class="product-image">
+
+                            <img
+                                alt="Girls Yellow Frock"
+                                loading="lazy"
+                                src="https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?auto=format&fit=crop&w=900&q=90">
+
+                            <span class="discount-tag">
+                                10% OFF
+                            </span>
+
+                            <button
+                                aria-label="Add to wishlist"
+                                class="wishlist-btn"
+                                type="button">
+
+                                <i class="fa-regular fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+                        <div class="product-details">
+
+                            <p class="product-category">
+                                Girls Frocks
+                            </p>
+
+                            <h3>Girls Yellow Frock</h3>
+
+                            <div class="rating">
+                                ★★★★☆ (4.4)
+                            </div>
+
+                            <p class="product-price">
+                                ₹899 <del>₹999</del>
+                            </p>
+
+                            <div class="product-buttons">
+
+                                <button class="add-cart" type="button">
+                                    Add to Cart
+                                </button>
+
+                                <button class="buy-now" type="button">
+                                    Buy Now
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Product 7 -->
+                    <article
+                        class="product-card"
+                        data-category="girls-tops"
+                        data-color="white"
+                        data-name="Girls White Casual Top"
+                        data-price="599"
+                        data-size="4-5Y,6-7Y,8-9Y">
+
+                        <div class="product-image">
+
+                           <img
+  src="https://chazkids.com/cdn/shop/files/0XC3D4C36FC13287C4EB965FF0784C8DB0_0XE20C2CFA29CAF80D7E744853126FDBB4.png?v=1776495383"
+  alt="Girls White Casual Top"
+>
+                            <span class="discount-tag">
+                                15% OFF
+                            </span>
+
+                            <button
+                                aria-label="Add to wishlist"
+                                class="wishlist-btn"
+                                type="button">
+
+                                <i class="fa-regular fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+                        <div class="product-details">
+
+                            <p class="product-category">
+                                Girls Tops
+                            </p>
+
+                            <h3>Girls White Casual Top</h3>
+
+                            <div class="rating">
+                                ★★★★☆ (4.2)
+                            </div>
+
+                            <p class="product-price">
+                                ₹599 <del>₹699</del>
+                            </p>
+
+                            <div class="product-buttons">
+
+                                <button class="add-cart" type="button">
+                                    Add to Cart
+                                </button>
+
+                                <button class="buy-now" type="button">
+                                    Buy Now
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Product 8 -->
+                    <article
+                        class="product-card"
+                        data-category="kids-sets"
+                        data-color="green"
+                        data-name="Kids Green Outfit Set"
+                        data-price="1199"
+                        data-size="2-3Y,4-5Y,6-7Y">
+
+                        <div class="product-image">
+
+                           <img
+  src="https://www.wearduds.com/cdn/shop/files/ace-green-coord-set-boys-girls-stylish-comfortable.jpg?v=1758703533&width=1080"
+  alt="Kids Green Outfit Set"
+>
+
+                            <span class="discount-tag">
+                                20% OFF
+                            </span>
+
+                            <button
+                                aria-label="Add to wishlist"
+                                class="wishlist-btn"
+                                type="button">
+
+                                <i class="fa-regular fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+                        <div class="product-details">
+
+                            <p class="product-category">
+                                Kids Sets
+                            </p>
+
+                            <h3>Kids Green Outfit Set</h3>
+
+                            <div class="rating">
+                                ★★★★☆ (4.5)
+                            </div>
+
+                            <p class="product-price">
+                                ₹1,199 <del>₹1,499</del>
+                            </p>
+
+                            <div class="product-buttons">
+
+                                <button class="add-cart" type="button">
+                                    Add to Cart
+                                </button>
+
+                                <button class="buy-now" type="button">
+                                    Buy Now
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Product 9 -->
+                    <article
+                        class="product-card"
+                        data-category="boys-shirts"
+                        data-color="white"
+                        data-name="Boys White Party Shirt"
+                        data-price="749"
+                        data-size="4-5Y,6-7Y,8-9Y">
+
+                        <div class="product-image">
+
+                           <img
+  src="https://imagescdn.allensolly.com/img/app/product/9/937175-13773434.jpg?auto=format&w=900"
+  alt="Boys White Party Shirt"
+>
+                            <span class="discount-tag">
+                                17% OFF
+                            </span>
+
+                            <button
+                                aria-label="Add to wishlist"
+                                class="wishlist-btn"
+                                type="button">
+
+                                <i class="fa-regular fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+                        <div class="product-details">
+
+                            <p class="product-category">
+                                Boys Shirts
+                            </p>
+
+                            <h3>Boys White Party Shirt</h3>
+
+                            <div class="rating">
+                                ★★★★★ (4.5)
+                            </div>
+
+                            <p class="product-price">
+                                ₹749 <del>₹899</del>
+                            </p>
+
+                            <div class="product-buttons">
+
+                                <button class="add-cart" type="button">
+                                    Add to Cart
+                                </button>
+
+                                <button class="buy-now" type="button">
+                                    Buy Now
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Product 10 -->
+                    <article
+                        class="product-card"
+                        data-category="boys-tshirts"
+                        data-color="red"
+                        data-name="Boys Red Graphic T-Shirt"
+                        data-price="449"
+                        data-size="2-3Y,4-5Y,6-7Y">
+
+                        <div class="product-image">
+
+                            <img
+                                alt="Boys red graphic t-shirt"
+                                loading="lazy"
+                                src="https://images.unsplash.com/photo-1503919005314-30d93d07d823?auto=format&fit=crop&w=900&q=90">
+
+                            <span class="discount-tag">
+                                18% OFF
+                            </span>
+
+                            <button
+                                aria-label="Add to wishlist"
+                                class="wishlist-btn"
+                                type="button">
+
+                                <i class="fa-regular fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+                        <div class="product-details">
+
+                            <p class="product-category">
+                                Boys Tshirts
+                            </p>
+
+                            <h3>Boys orange Graphic T-Shirt</h3>
+
+                            <div class="rating">
+                                ★★★★★ (4.3)
+                            </div>
+
+                            <p class="product-price">
+                                ₹449 <del>₹549</del>
+                            </p>
+
+                            <div class="product-buttons">
+
+                                <button class="add-cart" type="button">
+                                    Add to Cart
+                                </button>
+
+                                <button class="buy-now" type="button">
+                                    Buy Now
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Product 11 -->
+                    <article
+                        class="product-card"
+                        data-category="girls-frocks"
+                        data-color="pink"
+                        data-name="Girls Pink Party Frock"
+                        data-price="1099"
+                        data-size="2-3Y,4-5Y,6-7Y">
+
+                        <div class="product-image">
+
+                           <img src="https://www.vishalmegamart.com/on/demandware.static/-/Sites-vmm-apparel-master-catalog/default/dw861b5fe6/images/large/1132122810005.jpg"
+     alt="Girls Pink Party Frock">
+
+                            <span class="discount-tag">
+                                15% OFF
+                            </span>
+
+                            <button
+                                aria-label="Add to wishlist"
+                                class="wishlist-btn"
+                                type="button">
+
+                                <i class="fa-regular fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+                        <div class="product-details">
+
+                            <p class="product-category">
+                                Girls Frocks
+                            </p>
+
+                            <h3>Girls Pink Party Frock</h3>
+
+                            <div class="rating">
+                                ★★★★★ (4.6)
+                            </div>
+
+                            <p class="product-price">
+                                ₹1,099 <del>₹1,299</del>
+                            </p>
+
+                            <div class="product-buttons">
+
+                                <button class="add-cart" type="button">
+                                    Add to Cart
+                                </button>
+
+                                <button class="buy-now" type="button">
+                                    Buy Now
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Product 12 -->
+                    <article
+                        class="product-card"
+                        data-category="kids-sets"
+                        data-color="blue"
+                        data-name="Blue Kids Co-ord Set"
+                        data-price="1299"
+                        data-size="4-5Y,6-7Y,8-9Y">
+
+                        <div class="product-image">
+
+                           <img src="https://thelionandthefish.com/cdn/shop/files/4H9A9618.jpg?v=1734602741"
+     alt="Blue Kids Co-ord Set">
+                            <span class="discount-tag">
+                                19% OFF
+                            </span>
+
+                            <button
+                                aria-label="Add to wishlist"
+                                class="wishlist-btn"
+                                type="button">
+
+                                <i class="fa-regular fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+                        <div class="product-details">
+
+                            <p class="product-category">
+                                Kids Sets
+                            </p>
+
+                            <h3>Blue Kids Co-ord Set</h3>
+
+                            <div class="rating">
+                                ★★★★★ (4.4)
+                            </div>
+
+                            <p class="product-price">
+                                ₹1,299 <del>₹1,599</del>
+                            </p>
+
+                            <div class="product-buttons">
+
+                                <button class="add-cart" type="button">
+                                    Add to Cart
+                                </button>
+
+                                <button class="buy-now" type="button">
+                                    Buy Now
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <!-- No Products Found -->
+                <div class="no-products" id="noProducts" style="display:none;">
+
+                    <h3>No Products Found</h3>
+
+                    <p>
+                        Try changing your filters.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer footer" id="footer">
+
+        <div class="footer-content">
+
+            <h2>SMART SHOPPING</h2>
+
+            <p>
+                Comfort and Style for Every Little Star.
+            </p>
+
+            <div class="footer-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="men.html">Men</a>
+
+                <a href="woman.html">Women</a>
+
+                <a href="kids.html">Kids</a>
+
+                <a href="accessories.html">Accessories</a>
+
+            </div>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 SMART SHOPPING. All Rights Reserved.
+        </p>
+
+    </footer>
+
+    <script src="script.js" defer></script>
+
+</body>
+
+</html>

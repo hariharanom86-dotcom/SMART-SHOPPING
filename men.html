@@ -1,0 +1,1269 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Men's Collection | SMART SHOPPING</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Notification Popup -->
+    <div class="notification-popup" id="notification-popup">
+        <p>Welcome to SMART SHOPPING! Enjoy our latest collections.</p>
+
+        <button id="closeNotification">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        Free Shipping on Orders Above ₹999
+    </div>
+
+    <!-- Offer Bar -->
+    <div class="offer-bar">
+        <p>NEW SEASON SALE - UP TO 40% OFF</p>
+    </div>
+
+    <!-- Main Navbar -->
+    <header class="main-navbar">
+
+        <div class="logo">
+            <a href="index.html">SMART SHOPPING</a>
+        </div>
+
+        <nav class="navigation">
+            <ul>
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li class="shop-menu">
+
+                    <button
+                        class="shop-toggle"
+                        id="shopToggle"
+                        type="button"
+                        aria-controls="shopDropdown"
+                        aria-expanded="false"
+                        aria-haspopup="true">
+
+                        Shop
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </button>
+
+                    <ul class="dropdown-menu" id="shopDropdown">
+
+                        <li>
+                            <a href="men.html">Men</a>
+                        </li>
+
+                        <li>
+                            <a href="woman.html">Women</a>
+                        </li>
+
+                        <li>
+                            <a href="kids.html">Kids</a>
+                        </li>
+
+                        <li>
+                            <a href="accessories.html">Accessories</a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li>
+                    <a href="#">About</a>
+                </li>
+
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="navbar-actions">
+
+            <div class="navbar-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search products...">
+            </div>
+
+            <button class="nav-icon" aria-label="Wishlist">
+                <i class="fa-regular fa-heart"></i>
+                <span id="wishlistCount">0</span>
+            </button>
+
+            <button class="nav-icon" aria-label="Cart">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span id="cartCount">0</span>
+            </button>
+
+        </div>
+
+    </header>
+
+    <!-- Collection Banner -->
+    <section class="collection-banner men-banner">
+
+        <div class="banner-content">
+
+            <p class="banner-subtitle">
+                SMART SHOPPING COLLECTION
+            </p>
+
+            <h1>Men's Collection</h1>
+
+            <p>
+                Discover timeless styles and premium everyday essentials.
+            </p>
+
+            <a href="#products" class="banner-button">
+                Shop Now
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- Collection Section -->
+    <main class="shop-container" id="products">
+
+        <div class="shop-heading">
+
+            <div>
+
+                <p class="section-subtitle">
+                    EXPLORE OUR STYLE
+                </p>
+
+                <h2>Men's Clothing</h2>
+
+                <p>
+                    Find your perfect style from our latest collection.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="shop-layout">
+
+            <!-- Filter Sidebar -->
+            <aside class="filter-sidebar">
+
+                <div class="filter-heading">
+
+                    <h3>Filters</h3>
+
+                    <button id="clearFilters">
+                        Clear All
+                    </button>
+
+                </div>
+
+                <!-- Category Filter -->
+                <div class="filter-group">
+
+                    <h4>Category</h4>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            class="category-filter"
+                            value="shirts">
+                        Shirts
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            class="category-filter"
+                            value="tshirts">
+                        T-Shirts
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            class="category-filter"
+                            value="jeans">
+                        Jeans
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            class="category-filter"
+                            value="trousers">
+                        Trousers
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            class="category-filter"
+                            value="jackets">
+                        Jackets
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            class="category-filter"
+                            value="hoodies">
+                        Hoodies
+                    </label>
+
+                </div>
+
+                <!-- Price Filter -->
+                <div class="filter-group">
+
+                    <h4>Price Range</h4>
+
+                    <div class="price-value">
+                        Up to ₹<span id="priceValue">5000</span>
+                    </div>
+
+                    <input
+                        type="range"
+                        id="priceRange"
+                        min="500"
+                        max="5000"
+                        step="100"
+                        value="5000">
+
+                    <div class="price-labels">
+                        <span>₹500</span>
+                        <span>₹5000</span>
+                    </div>
+
+                </div>
+
+                <!-- Colour Filter -->
+                <div class="filter-group">
+
+                    <h4>Colour</h4>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            class="color-filter"
+                            value="black">
+                        Black
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            class="color-filter"
+                            value="white">
+                        White
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            class="color-filter"
+                            value="blue">
+                        Blue
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            class="color-filter"
+                            value="green">
+                        Green
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            class="color-filter"
+                            value="brown">
+                        Brown
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            class="color-filter"
+                            value="grey">
+                        Grey
+                    </label>
+
+                </div>
+
+                <!-- Size Filter -->
+                <div class="filter-group">
+
+                    <h4>Size</h4>
+
+                    <div class="size-options">
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                class="size-filter"
+                                value="S">
+                            S
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                class="size-filter"
+                                value="M">
+                            M
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                class="size-filter"
+                                value="L">
+                            L
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                class="size-filter"
+                                value="XL">
+                            XL
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                class="size-filter"
+                                value="XXL">
+                            XXL
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+            <!-- Products Area -->
+            <section class="products-area">
+
+                <div class="products-toolbar">
+
+                    <p>
+                        <span id="productCount">
+                            Showing
+                            <span class="count-number">12</span>
+                            of 12 products
+                        </span>
+                        Products
+                    </p>
+
+                    <div class="sort-container">
+
+                        <label for="sortSelect">
+                            Sort By:
+                        </label>
+
+                        <select id="sortSelect">
+
+                            <option value="default">
+                                Recommended
+                            </option>
+
+                            <option value="low-high">
+                                Price: Low to High
+                            </option>
+
+                            <option value="high-low">
+                                Price: High to Low
+                            </option>
+
+                            <option value="name">
+                                Name: A to Z
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <!-- Product Grid -->
+                <div class="product-grid" id="productGrid">
+
+                    <!-- Product 1 -->
+                    <article
+                        class="product-card"
+                        data-category="shirts"
+                        data-color="black"
+                        data-name="Premium Black Shirt"
+                        data-price="1499"
+                        data-size="M,L,XL">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=900&q=90"
+                                alt="Premium Black Shirt"
+                                loading="lazy">
+
+                            <span class="discount-tag">
+                                20% OFF
+                            </span>
+
+                            <button
+                                class="wishlist-btn"
+                                type="button"
+                                aria-label="Add to wishlist">
+
+                                <i class="fa-regular fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+                        <div class="product-details">
+
+                            <p class="product-category">
+                                Men's Shirts
+                            </p>
+
+                            <h3>Premium Black Shirt</h3>
+
+                            <div class="rating">
+                                ★★★★★ <span>(4.8)</span>
+                            </div>
+
+                            <div class="product-price">
+                                ₹1,499 <del>₹1,899</del>
+                            </div>
+
+                            <div class="product-buttons">
+
+                                <button class="add-cart" type="button">
+                                    Add to Cart
+                                </button>
+
+                                <button class="buy-now" type="button">
+                                    Buy Now
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Product 2 -->
+                    <article
+                        class="product-card"
+                        data-category="tshirts"
+                        data-color="white"
+                        data-name="Classic White T-Shirt"
+                        data-price="899"
+                        data-size="S,M,L">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=90"
+                                alt="Classic White T-Shirt"
+                                loading="lazy">
+
+                            <span class="discount-tag">
+                                15% OFF
+                            </span>
+
+                            <button
+                                class="wishlist-btn"
+                                type="button"
+                                aria-label="Add to wishlist">
+
+                                <i class="fa-regular fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+                        <div class="product-details">
+
+                            <p class="product-category">
+                                Men's T-Shirts
+                            </p>
+
+                            <h3>Classic White T-Shirt</h3>
+
+                            <div class="rating">
+                                ★★★★★ <span>(4.7)</span>
+                            </div>
+
+                            <div class="product-price">
+                                ₹899 <del>₹1,099</del>
+                            </div>
+
+                            <div class="product-buttons">
+
+                                <button class="add-cart" type="button">
+                                    Add to Cart
+                                </button>
+
+                                <button class="buy-now" type="button">
+                                    Buy Now
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Product 3 -->
+                    <article
+                        class="product-card"
+                        data-category="jeans"
+                        data-color="blue"
+                        data-name="Men Slim Fit Jeans"
+                        data-price="1799"
+                        data-size="M,L,XL">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=900&q=90"
+                                alt="Men Slim Fit Jeans"
+                                loading="lazy">
+
+                            <span class="discount-tag">
+                                10% OFF
+                            </span>
+
+                            <button
+                                class="wishlist-btn"
+                                type="button"
+                                aria-label="Add to wishlist">
+
+                                <i class="fa-regular fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+                        <div class="product-details">
+
+                            <p class="product-category">
+                                Men's Jeans
+                            </p>
+
+                            <h3>Men Slim Fit Jeans</h3>
+
+                            <div class="rating">
+                                ★★★★★ <span>(4.6)</span>
+                            </div>
+
+                            <div class="product-price">
+                                ₹1,799 <del>₹1,999</del>
+                            </div>
+
+                            <div class="product-buttons">
+
+                                <button class="add-cart" type="button">
+                                    Add to Cart
+                                </button>
+
+                                <button class="buy-now" type="button">
+                                    Buy Now
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Product 4 -->
+                    <article
+                        class="product-card"
+                        data-category="jackets"
+                        data-color="black"
+                        data-name="Casual Black Jacket"
+                        data-price="2499"
+                        data-size="L,XL,XXL">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=900&q=90"
+                                alt="Casual Black Jacket"
+                                loading="lazy">
+
+                            <span class="discount-tag">
+                                25% OFF
+                            </span>
+
+                            <button
+                                class="wishlist-btn"
+                                type="button"
+                                aria-label="Add to wishlist">
+
+                                <i class="fa-regular fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+                        <div class="product-details">
+
+                            <p class="product-category">
+                                Men's Jackets
+                            </p>
+
+                            <h3>Casual Black Jacket</h3>
+
+                            <div class="rating">
+                                ★★★★★ <span>(4.9)</span>
+                            </div>
+
+                            <div class="product-price">
+                                ₹2,499 <del>₹3,299</del>
+                            </div>
+
+                            <div class="product-buttons">
+
+                                <button class="add-cart" type="button">
+                                    Add to Cart
+                                </button>
+
+                                <button class="buy-now" type="button">
+                                    Buy Now
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Product 5 -->
+                    <article
+                        class="product-card"
+                        data-category="shirts"
+                        data-color="blue"
+                        data-name="Blue Formal Shirt"
+                        data-price="1299"
+                        data-size="M,L,XL">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1603252109303-2751441dd157?auto=format&fit=crop&w=900&q=90"
+                                alt="Blue Formal Shirt"
+                                loading="lazy">
+
+                            <span class="discount-tag">
+                                15% OFF
+                            </span>
+
+                            <button
+                                class="wishlist-btn"
+                                type="button"
+                                aria-label="Add to wishlist">
+
+                                <i class="fa-regular fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+                        <div class="product-details">
+
+                            <p class="product-category">
+                                Men's Shirts
+                            </p>
+
+                            <h3>Blue Formal Shirt</h3>
+
+                            <div class="rating">
+                                ★★★★★ <span>(4.5)</span>
+                            </div>
+
+                            <div class="product-price">
+                                ₹1,299 <del>₹1,499</del>
+                            </div>
+
+                            <div class="product-buttons">
+
+                                <button class="add-cart" type="button">
+                                    Add to Cart
+                                </button>
+
+                                <button class="buy-now" type="button">
+                                    Buy Now
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Product 6 -->
+                    <article
+                        class="product-card"
+                        data-category="tshirts"
+                        data-color="black"
+                        data-name="Black Casual T-Shirt"
+                        data-price="699"
+                        data-size="S,M,L">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=900&q=90"
+                                alt="Black Casual T-Shirt"
+                                loading="lazy">
+
+                            <span class="discount-tag">
+                                20% OFF
+                            </span>
+
+                            <button
+                                class="wishlist-btn"
+                                type="button"
+                                aria-label="Add to wishlist">
+
+                                <i class="fa-regular fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+                        <div class="product-details">
+
+                            <p class="product-category">
+                                Men's T-Shirts
+                            </p>
+
+                            <h3>Black Casual T-Shirt</h3>
+
+                            <div class="rating">
+                                ★★★★★ <span>(4.6)</span>
+                            </div>
+
+                            <div class="product-price">
+                                ₹699 <del>₹899</del>
+                            </div>
+
+                            <div class="product-buttons">
+
+                                <button class="add-cart" type="button">
+                                    Add to Cart
+                                </button>
+
+                                <button class="buy-now" type="button">
+                                    Buy Now
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Product 7 -->
+                    <article
+                        class="product-card"
+                        data-category="jeans"
+                        data-color="black"
+                        data-name="Black Slim Fit Jeans"
+                        data-price="1599"
+                        data-size="M,L,XL">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=900&q=90"
+                                alt="Black Slim Fit Jeans"
+                                loading="lazy">
+
+                            <span class="discount-tag">
+                                15% OFF
+                            </span>
+
+                            <button
+                                class="wishlist-btn"
+                                type="button"
+                                aria-label="Add to wishlist">
+
+                                <i class="fa-regular fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+                        <div class="product-details">
+
+                            <p class="product-category">
+                                Men's Jeans
+                            </p>
+
+                            <h3>Black Slim Fit Jeans</h3>
+
+                            <div class="rating">
+                                ★★★★★ <span>(4.7)</span>
+                            </div>
+
+                            <div class="product-price">
+                                ₹1,599 <del>₹1,899</del>
+                            </div>
+
+                            <div class="product-buttons">
+
+                                <button class="add-cart" type="button">
+                                    Add to Cart
+                                </button>
+
+                                <button class="buy-now" type="button">
+                                    Buy Now
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Product 8 -->
+                    <article
+                        class="product-card"
+                        data-category="jackets"
+                        data-color="blue"
+                        data-name="Blue Denim Jacket"
+                        data-price="2799"
+                        data-size="L,XL,XXL">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1578681994506-b8f463449011?auto=format&fit=crop&w=900&q=90"
+                                alt="Blue Denim Jacket"
+                                loading="lazy">
+
+                            <span class="discount-tag">
+                                20% OFF
+                            </span>
+
+                            <button
+                                class="wishlist-btn"
+                                type="button"
+                                aria-label="Add to wishlist">
+
+                                <i class="fa-regular fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+                        <div class="product-details">
+
+                            <p class="product-category">
+                                Men's Jackets
+                            </p>
+
+                            <h3>Blue Denim Jacket</h3>
+
+                            <div class="rating">
+                                ★★★★★ <span>(4.8)</span>
+                            </div>
+
+                            <div class="product-price">
+                                ₹2,799 <del>₹3,499</del>
+                            </div>
+
+                            <div class="product-buttons">
+
+                                <button class="add-cart" type="button">
+                                    Add to Cart
+                                </button>
+
+                                <button class="buy-now" type="button">
+                                    Buy Now
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Product 9 -->
+                    <article
+                        class="product-card"
+                        data-category="shirts"
+                        data-color="white"
+                        data-name="White Casual Shirt"
+                        data-price="1099"
+                        data-size="S,M,L">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&w=900&q=90"
+                                alt="White Casual Shirt"
+                                loading="lazy">
+
+                            <span class="discount-tag">
+                                10% OFF
+                            </span>
+
+                            <button
+                                class="wishlist-btn"
+                                type="button"
+                                aria-label="Add to wishlist">
+
+                                <i class="fa-regular fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+                        <div class="product-details">
+
+                            <p class="product-category">
+                                Men's Shirts
+                            </p>
+
+                            <h3>White Casual Shirt</h3>
+
+                            <div class="rating">
+                                ★★★★★ <span>(4.5)</span>
+                            </div>
+
+                            <div class="product-price">
+                                ₹1,099 <del>₹1,299</del>
+                            </div>
+
+                            <div class="product-buttons">
+
+                                <button class="add-cart" type="button">
+                                    Add to Cart
+                                </button>
+
+                                <button class="buy-now" type="button">
+                                    Buy Now
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Product 10 -->
+                    <article
+                        class="product-card"
+                        data-category="tshirts"
+                        data-color="green"
+                        data-name="Green Polo T-Shirt"
+                        data-price="799"
+                        data-size="M,L,XL">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1627225924765-552d49cf47ad?auto=format&fit=crop&w=900&q=90"
+                                alt="Green Polo T-Shirt"
+                                loading="lazy">
+
+                            <span class="discount-tag">
+                                15% OFF
+                            </span>
+
+                            <button
+                                class="wishlist-btn"
+                                type="button"
+                                aria-label="Add to wishlist">
+
+                                <i class="fa-regular fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+                        <div class="product-details">
+
+                            <p class="product-category">
+                                Men's T-Shirts
+                            </p>
+
+                            <h3>Green Polo T-Shirt</h3>
+
+                            <div class="rating">
+                                ★★★★★ <span>(4.7)</span>
+                            </div>
+
+                            <div class="product-price">
+                                ₹799 <del>₹999</del>
+                            </div>
+
+                            <div class="product-buttons">
+
+                                <button class="add-cart" type="button">
+                                    Add to Cart
+                                </button>
+
+                                <button class="buy-now" type="button">
+                                    Buy Now
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Product 11 -->
+                    <article
+                        class="product-card"
+                        data-category="trousers"
+                        data-color="grey"
+                        data-name="Formal Grey Trousers"
+                        data-price="1399"
+                        data-size="M,L,XL">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=900&q=90"
+                                alt="Formal Grey Trousers"
+                                loading="lazy">
+
+                            <span class="discount-tag">
+                                20% OFF
+                            </span>
+
+                            <button
+                                class="wishlist-btn"
+                                type="button"
+                                aria-label="Add to wishlist">
+
+                                <i class="fa-regular fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+                        <div class="product-details">
+
+                            <p class="product-category">
+                                Men's Trousers
+                            </p>
+
+                            <h3>Formal Grey Trousers</h3>
+
+                            <div class="rating">
+                                ★★★★★ <span>(4.6)</span>
+                            </div>
+
+                            <div class="product-price">
+                                ₹1,399 <del>₹1,799</del>
+                            </div>
+
+                            <div class="product-buttons">
+
+                                <button class="add-cart" type="button">
+                                    Add to Cart
+                                </button>
+
+                                <button class="buy-now" type="button">
+                                    Buy Now
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Product 12 -->
+                    <article
+                        class="product-card"
+                        data-category="hoodies"
+                        data-color="brown"
+                        data-name="Premium Brown Hoodie"
+                        data-price="1999"
+                        data-size="L,XL,XXL">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=900&q=90"
+                                alt="Premium Brown Hoodie"
+                                loading="lazy">
+
+                            <span class="discount-tag">
+                                25% OFF
+                            </span>
+
+                            <button
+                                class="wishlist-btn"
+                                type="button"
+                                aria-label="Add to wishlist">
+
+                                <i class="fa-regular fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+                        <div class="product-details">
+
+                            <p class="product-category">
+                                Men's Hoodies
+                            </p>
+
+                            <h3>Premium Brown Hoodie</h3>
+
+                            <div class="rating">
+                                ★★★★★ <span>(4.9)</span>
+                            </div>
+
+                            <div class="product-price">
+                                ₹1,999 <del>₹2,599</del>
+                            </div>
+
+                            <div class="product-buttons">
+
+                                <button class="add-cart" type="button">
+                                    Add to Cart
+                                </button>
+
+                                <button class="buy-now" type="button">
+                                    Buy Now
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <!-- No Products Found -->
+                <div class="no-products" id="noProducts">
+
+                    <i class="fa-solid fa-box-open"></i>
+
+                    <h3>No Products Found</h3>
+
+                    <p>
+                        Try changing your filters or search keyword.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <h2>SMART SHOPPING</h2>
+
+                <p>
+                    Discover your style. Shop with confidence.
+                </p>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+                <a href="men.html">Men</a>
+                <a href="woman.html">Women</a>
+                <a href="kids.html">Kids</a>
+                <a href="accessories.html">Accessories</a>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h3>Customer Support</h3>
+
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms &amp; Conditions</a>
+
+            </div>
+
+            <div class="footer-social">
+
+                <h3>Follow Us</h3>
+
+                <div>
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 SMART SHOPPING. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="script.js" defer></script>
+
+</body>
+</html>

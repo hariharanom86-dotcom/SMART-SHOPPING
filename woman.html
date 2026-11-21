@@ -1,0 +1,441 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Women's Collection | SMART SHOPPING</title>
+<link href="style.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- Notification Popup -->
+<div class="notification-popup" id="notification-popup">
+    <p>Welcome to SMART SHOPPING! Enjoy exclusive offers.</p>
+    <button id="closeNotification">×</button>
+</div>
+
+<!-- Announcement Bar -->
+<div class="announcement-bar">
+    Free Shipping on Orders Above ₹999
+</div>
+
+<!-- Offer Bar -->
+<div class="offer-bar">
+    FLAT 30% OFF ON SELECTED WOMEN'S COLLECTION
+</div>
+
+<!-- Main Navbar -->
+<header class="main-navbar">
+    <div class="logo">
+        <a href="index.html">SMART SHOPPING</a>
+    </div>
+
+    <nav class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+
+            <li class="shop-menu">
+                <button aria-controls="shopDropdown"
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    class="shop-toggle"
+                    id="shopToggle"
+                    type="button">
+                    Shop <i class="fa-solid fa-chevron-down"></i>
+                </button>
+
+                <ul class="dropdown-menu" id="shopDropdown">
+                    <li><a href="men.html">Men</a></li>
+                    <li><a href="woman.html">Women</a></li>
+                    <li><a href="kids.html">Kids</a></li>
+                    <li><a href="accessories.html">Accessories</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="navbar-actions">
+        <div class="navbar-search">
+            <input id="searchInput" placeholder="Search products..." type="text"/>
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <div class="navbar-icons">
+            <a class="wishlist-icon" href="#">
+                <i class="fa-regular fa-heart"></i>
+                <span id="wishlistCount">0</span>
+            </a>
+
+            <a class="cart-icon" href="#">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cartCount">0</span>
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- Collection Banner -->
+<section class="collection-banner women-banner">
+    <div class="banner-content">
+        <p class="banner-subtitle">SMART SHOPPING COLLECTION</p>
+        <h1>Women's Collection</h1>
+        <p>Discover Your Style With Our Latest Fashion Collection</p>
+        <a class="banner-button" href="#products">Shop Now</a>
+    </div>
+</section>
+
+<!-- Main Shop Section -->
+<main class="shop-container" id="products">
+
+    <section class="shop-heading">
+        <h2>Women's Fashion</h2>
+        <p>Explore the latest styles and trends for women.</p>
+    </section>
+
+    <div class="shop-layout">
+
+        <!-- Filter Sidebar -->
+        <aside class="filter-sidebar">
+
+            <div class="filter-heading">
+                <h3>Filters</h3>
+                <button id="clearFilters">Clear All</button>
+            </div>
+
+            <!-- Category Filter -->
+            <div class="filter-group">
+                <h4>Category</h4>
+
+                <label><input class="category-filter" type="checkbox" value="sarees"/> Sarees</label>
+                <label><input class="category-filter" type="checkbox" value="chudithars"/> Chudithars</label>
+                <label><input class="category-filter" type="checkbox" value="kurtis"/> Kurtis</label>
+                <label><input class="category-filter" type="checkbox" value="tops"/> Tops</label>
+                <label><input class="category-filter" type="checkbox" value="leggings"/> Leggings</label>
+                <label><input class="category-filter" type="checkbox" value="gowns"/> Gowns</label>
+                <label><input class="category-filter" type="checkbox" value="jeans"/> Jeans</label>
+                <label><input class="category-filter" type="checkbox" value="dresses"/> Dresses</label>
+            </div>
+
+            <!-- Price Filter -->
+            <div class="filter-group">
+                <h4>Price Range</h4>
+
+                <input id="priceRange" max="5000" min="300" type="range" value="5000"/>
+
+                <p>Maximum Price: ₹<span id="priceValue">5000</span></p>
+            </div>
+
+            <!-- Colour Filter -->
+            <div class="filter-group">
+                <h4>Colour</h4>
+
+                <label><input class="color-filter" type="checkbox" value="black"/> Black</label>
+                <label><input class="color-filter" type="checkbox" value="white"/> White</label>
+                <label><input class="color-filter" type="checkbox" value="red"/> Red</label>
+                <label><input class="color-filter" type="checkbox" value="blue"/> Blue</label>
+                <label><input class="color-filter" type="checkbox" value="pink"/> Pink</label>
+                <label><input class="color-filter" type="checkbox" value="green"/> Green</label>
+                <label><input class="color-filter" type="checkbox" value="yellow"/> Yellow</label>
+            </div>
+
+            <!-- Size Filter -->
+            <div class="filter-group">
+                <h4>Size</h4>
+
+                <label><input class="size-filter" type="checkbox" value="S"/> S</label>
+                <label><input class="size-filter" type="checkbox" value="M"/> M</label>
+                <label><input class="size-filter" type="checkbox" value="L"/> L</label>
+                <label><input class="size-filter" type="checkbox" value="XL"/> XL</label>
+                <label><input class="size-filter" type="checkbox" value="XXL"/> XXL</label>
+            </div>
+
+        </aside>
+
+        <!-- Products Section -->
+        <section class="products-area">
+
+            <div class="products-toolbar">
+                <p id="productCount">
+                    Showing <span class="count-number">12</span> of 12 products
+                </p>
+
+                <select id="sortSelect">
+                    <option value="default">Recommended</option>
+                    <option value="low-high">Price: Low to High</option>
+                    <option value="high-low">Price: High to Low</option>
+                    <option value="name">Name: A to Z</option>
+                </select>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="product-grid" id="productGrid">
+
+                <!-- Product 1 -->
+                <article class="product-card" data-category="sarees" data-color="red" data-name="Traditional Red Saree" data-price="1999" data-size="M,L,XL">
+                    <div class="product-image">
+                        <img alt="Traditional Red Saree" loading="lazy" src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&amp;fit=crop&amp;w=900&amp;q=90"/>
+                        <span class="discount-tag">20% OFF</span>
+                        <button aria-label="Add to wishlist" class="wishlist-btn" type="button"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="product-details">
+                        <p class="product-category">Sarees</p>
+                        <h3>Traditional Red Saree</h3>
+                        <div class="rating">★★★★☆ (4.5)</div>
+                        <p class="product-price">₹1,999 <del>₹2,499</del></p>
+                        <div class="product-buttons">
+                            <button class="add-cart" type="button">Add to Cart</button>
+                            <button class="buy-now" type="button">Buy Now</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 2 -->
+                <article class="product-card" data-category="chudithars" data-color="blue" data-name="Elegant Blue Chudithar" data-price="1499" data-size="S,M,L,XL">
+                    <div class="product-image">
+                        <img alt="Blue Chudithar" loading="lazy" src="https://images.unsplash.com/photo-1632826727346-43a7ac6bcb1b?auto=format&amp;fit=crop&amp;w=900&amp;q=90"/>
+                        <span class="discount-tag">15% OFF</span>
+                        <button aria-label="Add to wishlist" class="wishlist-btn" type="button"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="product-details">
+                        <p class="product-category">Chudithars</p>
+                        <h3>Elegant Blue Chudithar</h3>
+                        <div class="rating">★★★★☆ (4.3)</div>
+                        <p class="product-price">₹1,499 <del>₹1,799</del></p>
+                        <div class="product-buttons">
+                            <button class="add-cart" type="button">Add to Cart</button>
+                            <button class="buy-now" type="button">Buy Now</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 3 -->
+                <article class="product-card" data-category="kurtis" data-color="pink" data-name="Pink Designer Kurti" data-price="899" data-size="S,M,L,XL">
+                    <div class="product-image">
+                        <img alt="Pink Kurti" loading="lazy" src="https://images.unsplash.com/photo-1597983073493-88cd35cf93b0?auto=format&amp;fit=crop&amp;w=900&amp;q=90"/>
+                        <span class="discount-tag">10% OFF</span>
+                        <button aria-label="Add to wishlist" class="wishlist-btn" type="button"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="product-details">
+                        <p class="product-category">Kurtis</p>
+                        <h3>Pink Designer Kurti</h3>
+                        <div class="rating">★★★★☆ (4.2)</div>
+                        <p class="product-price">₹899 <del>₹999</del></p>
+                        <div class="product-buttons">
+                            <button class="add-cart" type="button">Add to Cart</button>
+                            <button class="buy-now" type="button">Buy Now</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 4 -->
+                <article class="product-card" data-category="tops" data-color="white" data-name="White Casual Top" data-price="699" data-size="S,M,L">
+                    <div class="product-image">
+                        <img alt="White Women's Top" loading="lazy" src="https://images.unsplash.com/photo-1551163943-3f6a855d1153?auto=format&amp;fit=crop&amp;w=900&amp;q=90"/>
+                        <span class="discount-tag">20% OFF</span>
+                        <button aria-label="Add to wishlist" class="wishlist-btn" type="button"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="product-details">
+                        <p class="product-category">Tops</p>
+                        <h3>White Casual Top</h3>
+                        <div class="rating">★★★★☆ (4.4)</div>
+                        <p class="product-price">₹699 <del>₹899</del></p>
+                        <div class="product-buttons">
+                            <button class="add-cart" type="button">Add to Cart</button>
+                            <button class="buy-now" type="button">Buy Now</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 5 -->
+                <article class="product-card" data-category="leggings" data-color="black" data-name="Black Stretch Leggings" data-price="499" data-size="S,M,L,XL">
+                    <div class="product-image">
+                        <img alt="Black Leggings" loading="lazy" src="https://images.unsplash.com/photo-1575511757935-c5b17a0b7c6b?auto=format&amp;fit=crop&amp;w=900&amp;q=90"/>
+                        <span class="discount-tag">10% OFF</span>
+                        <button aria-label="Add to wishlist" class="wishlist-btn" type="button"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="product-details">
+                        <p class="product-category">Leggings</p>
+                        <h3>Black Stretch Leggings</h3>
+                        <div class="rating">★★★★☆ (4.1)</div>
+                        <p class="product-price">₹499 <del>₹599</del></p>
+                        <div class="product-buttons">
+                            <button class="add-cart" type="button">Add to Cart</button>
+                            <button class="buy-now" type="button">Buy Now</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 6 -->
+                <article class="product-card" data-category="gowns" data-color="green" data-name="Green Party Wear Gown" data-price="2499" data-size="M,L,XL,XXL">
+                    <div class="product-image">
+                        <img alt="Green Party Gown" loading="lazy" src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&amp;fit=crop&amp;w=900&amp;q=90"/>
+                        <span class="discount-tag">15% OFF</span>
+                        <button aria-label="Add to wishlist" class="wishlist-btn" type="button"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="product-details">
+                        <p class="product-category">Gowns</p>
+                        <h3>Green Party Wear Gown</h3>
+                        <div class="rating">★★★★★ (4.8)</div>
+                        <p class="product-price">₹2,499 <del>₹2,999</del></p>
+                        <div class="product-buttons">
+                            <button class="add-cart" type="button">Add to Cart</button>
+                            <button class="buy-now" type="button">Buy Now</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 7 -->
+                <article class="product-card" data-category="jeans" data-color="blue" data-name="Blue Slim Fit Jeans" data-price="1299" data-size="S,M,L,XL">
+                    <div class="product-image">
+                        <img alt="Blue Women's Jeans" loading="lazy" src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&amp;fit=crop&amp;w=900&amp;q=90"/>
+                        <span class="discount-tag">20% OFF</span>
+                        <button aria-label="Add to wishlist" class="wishlist-btn" type="button"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="product-details">
+                        <p class="product-category">Jeans</p>
+                        <h3>Blue Slim Fit Jeans</h3>
+                        <div class="rating">★★★★☆ (4.4)</div>
+                        <p class="product-price">₹1,299 <del>₹1,599</del></p>
+                        <div class="product-buttons">
+                            <button class="add-cart" type="button">Add to Cart</button>
+                            <button class="buy-now" type="button">Buy Now</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 8 -->
+                <article class="product-card" data-category="dresses" data-color="black" data-name="Black Party Wear Dress" data-price="1799" data-size="S,M,L,XL">
+                    <div class="product-image">
+                        <img alt="Black Women's Dress" loading="lazy" src="https://images.unsplash.com/photo-1701532969559-3a462ff02484?auto=format&amp;fit=crop&amp;w=900&amp;q=90"/>
+                        <span class="discount-tag">15% OFF</span>
+                        <button aria-label="Add to wishlist" class="wishlist-btn" type="button"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="product-details">
+                        <p class="product-category">Dresses</p>
+                        <h3>Black Party Wear Dress</h3>
+                        <div class="rating">★★★★☆ (4.6)</div>
+                        <p class="product-price">₹1,799 <del>₹2,099</del></p>
+                        <div class="product-buttons">
+                            <button class="add-cart" type="button">Add to Cart</button>
+                            <button class="buy-now" type="button">Buy Now</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 9 -->
+                <article class="product-card" data-category="sarees" data-color="green" data-name="Emerald Green Silk Saree" data-price="2199" data-size="M,L,XL">
+                    <div class="product-image">
+                        <img alt="Emerald green traditional saree" loading="lazy" src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&amp;fit=crop&amp;w=900&amp;q=90"/>
+                        <span class="discount-tag">21% OFF</span>
+                        <button aria-label="Add to wishlist" class="wishlist-btn" type="button"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="product-details">
+                        <p class="product-category">Sarees</p>
+                        <h3>Emerald Green Silk Saree</h3>
+                        <div class="rating">★★★★★ <span>(4.6)</span></div>
+                        <p class="product-price">₹2,199 <del>₹2,799</del></p>
+                        <div class="product-buttons">
+                            <button class="add-cart" type="button">Add to Cart</button>
+                            <button class="buy-now" type="button">Buy Now</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 10 -->
+                <article class="product-card" data-category="kurtis" data-color="yellow" data-name="Yellow Floral Kurti" data-price="1099" data-size="S,M,L,XL">
+                    <div class="product-image">
+                        <img
+    src="https://vivika.fashion/cdn/shop/files/040A5695.jpg?v=1718798616&amp;width=1445"
+    alt="Yellow Floral Kurti"
+    loading="lazy"
+>
+                        <span class="discount-tag">21% OFF</span>
+                        <button aria-label="Add to wishlist" class="wishlist-btn" type="button"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="product-details">
+                        <p class="product-category">Kurtis</p>
+                        <h3>Yellow Floral Kurti</h3>
+                        <div class="rating">★★★★★ <span>(4.4)</span></div>
+                        <p class="product-price">₹1,099 <del>₹1,399</del></p>
+                        <div class="product-buttons">
+                            <button class="add-cart" type="button">Add to Cart</button>
+                            <button class="buy-now" type="button">Buy Now</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 11 -->
+                <article class="product-card" data-category="tops" data-color="black" data-name="Black Everyday Top" data-price="799" data-size="S,M,L">
+                    <div class="product-image">
+                        <img alt="Black women's fashion top" loading="lazy" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&amp;fit=crop&amp;w=900&amp;q=90"/>
+                        <span class="discount-tag">20% OFF</span>
+                        <button aria-label="Add to wishlist" class="wishlist-btn" type="button"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="product-details">
+                        <p class="product-category">Tops</p>
+                        <h3>Black Everyday Top</h3>
+                        <div class="rating">★★★★★ <span>(4.3)</span></div>
+                        <p class="product-price">₹799 <del>₹999</del></p>
+                        <div class="product-buttons">
+                            <button class="add-cart" type="button">Add to Cart</button>
+                            <button class="buy-now" type="button">Buy Now</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 12 -->
+                <article class="product-card" data-category="dresses" data-color="pink" data-name="Pink Occasion Dress" data-price="1899" data-size="S,M,L,XL">
+                    <div class="product-image">
+                        <img alt="Pink occasion dress" loading="lazy" src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&amp;fit=crop&amp;w=900&amp;q=90"/>
+                        <span class="discount-tag">21% OFF</span>
+                        <button aria-label="Add to wishlist" class="wishlist-btn" type="button"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="product-details">
+                        <p class="product-category">Dresses</p>
+                        <h3>Pink Occasion Dress</h3>
+                        <div class="rating">★★★★★ <span>(4.7)</span></div>
+                        <p class="product-price">₹1,899 <del>₹2,399</del></p>
+                        <div class="product-buttons">
+                            <button class="add-cart" type="button">Add to Cart</button>
+                            <button class="buy-now" type="button">Buy Now</button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- No Products Found -->
+            <div class="no-products" id="noProducts" style="display:none;">
+                <h3>No Products Found</h3>
+                <p>Try changing your filters.</p>
+            </div>
+
+        </section>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="main-footer footer" id="footer">
+    <div class="footer-content">
+        <h2>SMART SHOPPING</h2>
+        <p>Your Style, Your Choice, Your Shopping Destination.</p>
+
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="men.html">Men</a>
+            <a href="woman.html">Women</a>
+            <a href="kids.html">Kids</a>
+            <a href="accessories.html">Accessories</a>
+        </div>
+    </div>
+
+    <p class="copyright">© 2026 SMART SHOPPING. All Rights Reserved.</p>
+</footer>
+
+<script defer src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,748 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessories Collection | SMART SHOPPING</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Notification Popup -->
+    <div class="notification-popup" id="notification-popup">
+        <p>Welcome to SMART SHOPPING! Enjoy exclusive offers.</p>
+        <button id="closeNotification">×</button>
+    </div>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        Free Shipping on Orders Above ₹999
+    </div>
+
+    <!-- Offer Bar -->
+    <div class="offer-bar">
+        COMPLETE YOUR LOOK WITH OUR LATEST ACCESSORIES
+    </div>
+
+    <!-- Navbar -->
+    <header class="main-navbar">
+
+        <div class="logo">
+            <a href="index.html">SMART SHOPPING</a>
+        </div>
+
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+
+                <li class="shop-menu">
+                    <button
+                        class="shop-toggle"
+                        id="shopToggle"
+                        type="button"
+                        aria-controls="shopDropdown"
+                        aria-expanded="false"
+                        aria-haspopup="true">
+                        Shop <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+
+                    <ul class="dropdown-menu" id="shopDropdown">
+                        <li><a href="men.html">Men</a></li>
+                        <li><a href="woman.html">Women</a></li>
+                        <li><a href="kids.html">Kids</a></li>
+                        <li><a href="accessories.html">Accessories</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="navbar-actions">
+
+            <div class="navbar-search">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search products...">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <div class="navbar-icons">
+
+                <a href="#" class="wishlist-icon">
+                    <i class="fa-regular fa-heart"></i>
+                    <span id="wishlistCount">0</span>
+                </a>
+
+                <a href="#" class="cart-icon">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cartCount">0</span>
+                </a>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Collection Banner -->
+    <section class="collection-banner accessories-banner">
+
+        <div class="banner-content">
+
+            <p class="banner-subtitle">
+                SMART SHOPPING COLLECTION
+            </p>
+
+            <h1>Accessories Collection</h1>
+
+            <p>Little Details Make a Big Difference</p>
+
+            <a href="#products" class="banner-button">
+                Shop Now
+            </a>
+
+        </div>
+    </section>
+
+    <!-- Main Shop Section -->
+    <main class="shop-container" id="products">
+
+        <section class="shop-heading">
+            <h2>Fashion Accessories</h2>
+            <p>Explore stylish accessories for every occasion.</p>
+        </section>
+
+        <div class="shop-layout">
+
+            <!-- Filter Sidebar -->
+            <aside class="filter-sidebar">
+
+                <div class="filter-heading">
+                    <h3>Filters</h3>
+                    <button id="clearFilters">Clear All</button>
+                </div>
+
+                <!-- Category Filter -->
+                <div class="filter-group">
+
+                    <h4>Category</h4>
+
+                    <label>
+                        <input type="checkbox" class="category-filter" value="watches">
+                        Watches
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="category-filter" value="sunglasses">
+                        Sunglasses
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="category-filter" value="spectacles">
+                        Spectacles
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="category-filter" value="caps">
+                        Caps
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="category-filter" value="rings">
+                        Rings
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="category-filter" value="belts">
+                        Belts
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="category-filter" value="shoes">
+                        Shoes
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="category-filter" value="heels">
+                        Heels
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="category-filter" value="makeup">
+                        Makeup Kits
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="category-filter" value="bracelets">
+                        Bracelets
+                    </label>
+
+                </div>
+
+                <!-- Price Filter -->
+                <div class="filter-group">
+
+                    <h4>Price Range</h4>
+
+                    <input
+                        type="range"
+                        id="priceRange"
+                        min="100"
+                        max="5000"
+                        value="5000">
+
+                    <p>
+                        Maximum Price: ₹<span id="priceValue">5000</span>
+                    </p>
+
+                </div>
+
+                <!-- Colour Filter -->
+                <div class="filter-group">
+
+                    <h4>Colour</h4>
+
+                    <label>
+                        <input type="checkbox" class="color-filter" value="black">
+                        Black
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="color-filter" value="white">
+                        White
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="color-filter" value="gold">
+                        Gold
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="color-filter" value="silver">
+                        Silver
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="color-filter" value="brown">
+                        Brown
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="color-filter" value="blue">
+                        Blue
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="color-filter" value="pink">
+                        Pink
+                    </label>
+
+                </div>
+
+                <!-- Size Filter -->
+                <div class="filter-group">
+
+                    <h4>Size</h4>
+
+                    <label>
+                        <input type="checkbox" class="size-filter" value="S">
+                        Small
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="size-filter" value="M">
+                        Medium
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="size-filter" value="L">
+                        Large
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="size-filter" value="XL">
+                        XL
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="size-filter" value="Free Size">
+                        Free Size
+                    </label>
+
+                </div>
+
+            </aside>
+
+            <!-- Products Section -->
+            <section class="products-area">
+
+                <div class="products-toolbar">
+
+                    <p id="productCount">
+                        Showing <span class="count-number">12</span> of 12 products
+                    </p>
+
+                    <select id="sortSelect">
+                        <option value="default">Recommended</option>
+                        <option value="low-high">Price: Low to High</option>
+                        <option value="high-low">Price: High to Low</option>
+                        <option value="name">Name: A to Z</option>
+                    </select>
+
+                </div>
+
+                <!-- Product Grid -->
+                <div class="product-grid" id="productGrid">
+
+                    <!-- Product 1 -->
+                    <article class="product-card"
+                        data-category="watches"
+                        data-color="black"
+                        data-name="Premium Black Watch"
+                        data-price="1999"
+                        data-size="Free Size">
+
+                        <div class="product-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=90"
+                                alt="Black Wrist Watch"
+                                loading="lazy">
+
+                            <span class="discount-tag">20% OFF</span>
+
+                            <button class="wishlist-btn" type="button" aria-label="Add to wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="product-details">
+                            <p class="product-category">Watches</p>
+                            <h3>Premium Black Watch</h3>
+                            <div class="rating">★★★★★ (4.8)</div>
+                            <p class="product-price">₹1,999 <del>₹2,499</del></p>
+
+                            <div class="product-buttons">
+                                <button class="add-cart" type="button">Add to Cart</button>
+                                <button class="buy-now" type="button">Buy Now</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 2 -->
+                    <article class="product-card"
+                        data-category="sunglasses"
+                        data-color="black"
+                        data-name="Classic Black Sunglasses"
+                        data-price="799"
+                        data-size="Free Size">
+
+                        <div class="product-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=900&q=90"
+                                alt="Black Sunglasses"
+                                loading="lazy">
+
+                            <span class="discount-tag">15% OFF</span>
+
+                            <button class="wishlist-btn" type="button" aria-label="Add to wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="product-details">
+                            <p class="product-category">Sunglasses</p>
+                            <h3>Classic Black Sunglasses</h3>
+                            <div class="rating">★★★★☆ (4.5)</div>
+                            <p class="product-price">₹799 <del>₹949</del></p>
+
+                            <div class="product-buttons">
+                                <button class="add-cart" type="button">Add to Cart</button>
+                                <button class="buy-now" type="button">Buy Now</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 3 -->
+                    <article class="product-card"
+                        data-category="spectacles"
+                        data-color="brown"
+                        data-name="Modern Fashion Spectacles"
+                        data-price="999"
+                        data-size="Free Size">
+
+                        <div class="product-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1574258495973-f010dfbb5371?auto=format&fit=crop&w=900&q=90"
+                                alt="Fashion Spectacles"
+                                loading="lazy">
+
+                            <span class="discount-tag">10% OFF</span>
+
+                            <button class="wishlist-btn" type="button" aria-label="Add to wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="product-details">
+                            <p class="product-category">Spectacles</p>
+                            <h3>Modern Fashion Spectacles</h3>
+                            <div class="rating">★★★★☆ (4.3)</div>
+                            <p class="product-price">₹999 <del>₹1,099</del></p>
+
+                            <div class="product-buttons">
+                                <button class="add-cart" type="button">Add to Cart</button>
+                                <button class="buy-now" type="button">Buy Now</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 4 -->
+                    <article class="product-card"
+                        data-category="caps"
+                        data-color="black"
+                        data-name="Black Fashion Cap"
+                        data-price="499"
+                        data-size="Free Size">
+
+                        <div class="product-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=900&q=90"
+                                alt="Black Fashion Cap"
+                                loading="lazy">
+
+                            <span class="discount-tag">15% OFF</span>
+
+                            <button class="wishlist-btn" type="button" aria-label="Add to wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="product-details">
+                            <p class="product-category">Caps</p>
+                            <h3>Black Fashion Cap</h3>
+                            <div class="rating">★★★★☆ (4.2)</div>
+                            <p class="product-price">₹499 <del>₹599</del></p>
+
+                            <div class="product-buttons">
+                                <button class="add-cart" type="button">Add to Cart</button>
+                                <button class="buy-now" type="button">Buy Now</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 5 -->
+                    <article class="product-card"
+                        data-category="rings"
+                        data-color="gold"
+                        data-name="Elegant Gold Ring"
+                        data-price="399"
+                        data-size="Free Size">
+
+                        <div class="product-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=900&q=90"
+                                alt="Gold Fashion Ring"
+                                loading="lazy">
+
+                            <span class="discount-tag">10% OFF</span>
+
+                            <button class="wishlist-btn" type="button" aria-label="Add to wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="product-details">
+                            <p class="product-category">Rings</p>
+                            <h3>Elegant Gold Ring</h3>
+                            <div class="rating">★★★★☆ (4.4)</div>
+                            <p class="product-price">₹399 <del>₹499</del></p>
+
+                            <div class="product-buttons">
+                                <button class="add-cart" type="button">Add to Cart</button>
+                                <button class="buy-now" type="button">Buy Now</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 6 -->
+                    <article class="product-card"
+                        data-category="belts"
+                        data-color="brown"
+                        data-name="Brown Leather Belt"
+                        data-price="599"
+                        data-size="Free Size">
+
+                        <div class="product-image">
+                           <img src="https://images.unsplash.com/photo-1565251419287-9097aa7299ec?auto=format&fit=crop&w=900&q=90"
+     alt="Brown Leather Belt">
+
+                            <span class="discount-tag">15% OFF</span>
+
+                            <button class="wishlist-btn" type="button" aria-label="Add to wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="product-details">
+                            <p class="product-category">Belts</p>
+                            <h3>Brown Leather Belt</h3>
+                            <div class="rating">★★★★☆ (4.3)</div>
+                            <p class="product-price">₹599 <del>₹699</del></p>
+
+                            <div class="product-buttons">
+                                <button class="add-cart" type="button">Add to Cart</button>
+                                <button class="buy-now" type="button">Buy Now</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 7 -->
+                    <article class="product-card"
+                        data-category="shoes"
+                        data-color="white"
+                        data-name="Casual Sports Shoes"
+                        data-price="1799"
+                        data-size="M,L,XL">
+
+                        <div class="product-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=90"
+                                alt="White Sports Shoes"
+                                loading="lazy">
+
+                            <span class="discount-tag">20% OFF</span>
+
+                            <button class="wishlist-btn" type="button" aria-label="Add to wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="product-details">
+                            <p class="product-category">Shoes</p>
+                            <h3>Casual Sports Shoes</h3>
+                            <div class="rating">★★★★★ (4.7)</div>
+                            <p class="product-price">₹1,799 <del>₹2,199</del></p>
+
+                            <div class="product-buttons">
+                                <button class="add-cart" type="button">Add to Cart</button>
+                                <button class="buy-now" type="button">Buy Now</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 8 -->
+                    <article class="product-card"
+                        data-category="heels"
+                        data-color="pink"
+                        data-name="Pink Party Wear Heels"
+                        data-price="1499"
+                        data-size="M,L,XL">
+
+                        <div class="product-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=900&q=90"
+                                alt="Pink Women's Heels"
+                                loading="lazy">
+
+                            <span class="discount-tag">15% OFF</span>
+
+                            <button class="wishlist-btn" type="button" aria-label="Add to wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="product-details">
+                            <p class="product-category">Heels</p>
+                            <h3>Pink Party Wear Heels</h3>
+                            <div class="rating">★★★★☆ (4.5)</div>
+                            <p class="product-price">₹1,499 <del>₹1,799</del></p>
+
+                            <div class="product-buttons">
+                                <button class="add-cart" type="button">Add to Cart</button>
+                                <button class="buy-now" type="button">Buy Now</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 9 -->
+                    <article class="product-card"
+                        data-category="makeup"
+                        data-color="pink"
+                        data-name="Women's Makeup Kit"
+                        data-price="1299"
+                        data-size="Free Size">
+
+                        <div class="product-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=900&q=90"
+                                alt="Makeup Kit"
+                                loading="lazy">
+
+                            <span class="discount-tag">20% OFF</span>
+
+                            <button class="wishlist-btn" type="button" aria-label="Add to wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="product-details">
+                            <p class="product-category">Makeup</p>
+                            <h3>Women's Makeup Kit</h3>
+                            <div class="rating">★★★★☆ (4.4)</div>
+                            <p class="product-price">₹1,299 <del>₹1,599</del></p>
+
+                            <div class="product-buttons">
+                                <button class="add-cart" type="button">Add to Cart</button>
+                                <button class="buy-now" type="button">Buy Now</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 10 -->
+                    <article class="product-card"
+                        data-category="bracelets"
+                        data-color="gold"
+                        data-name="Traditional Gold Bracelet"
+                        data-price="499"
+                        data-size="Free Size">
+
+                        <div class="product-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=900&q=90"
+                                alt="Gold Bracelet"
+                                loading="lazy">
+
+                            <span class="discount-tag">10% OFF</span>
+
+                            <button class="wishlist-btn" type="button" aria-label="Add to wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="product-details">
+                            <p class="product-category">Bracelets</p>
+                            <h3>Traditional Gold Bracelet</h3>
+                            <div class="rating">★★★★☆ (4.3)</div>
+                            <p class="product-price">₹499 <del>₹599</del></p>
+
+                            <div class="product-buttons">
+                                <button class="add-cart" type="button">Add to Cart</button>
+                                <button class="buy-now" type="button">Buy Now</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 11 -->
+                    <article class="product-card"
+                        data-category="watches"
+                        data-color="silver"
+                        data-name="Silver Classic Watch"
+                        data-price="2299"
+                        data-size="Free Size">
+
+                        <div class="product-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=90"
+                                alt="Silver Classic Wrist Watch"
+                                loading="lazy">
+
+                            <span class="discount-tag">18% OFF</span>
+
+                            <button class="wishlist-btn" type="button" aria-label="Add to wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="product-details">
+                            <p class="product-category">Watches</p>
+                            <h3>Silver Classic Watch</h3>
+                            <div class="rating">★★★★★ (4.7)</div>
+                            <p class="product-price">₹2,299 <del>₹2,799</del></p>
+
+                            <div class="product-buttons">
+                                <button class="add-cart" type="button">Add to Cart</button>
+                                <button class="buy-now" type="button">Buy Now</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 12 -->
+                    <article class="product-card"
+                        data-category="sunglasses"
+                        data-color="brown"
+                        data-name="Brown Frame Sunglasses"
+                        data-price="899"
+                        data-size="Free Size">
+
+                        <div class="product-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=900&q=90"
+                                alt="Brown Frame Sunglasses"
+                                loading="lazy">
+
+                            <span class="discount-tag">18% OFF</span>
+
+                            <button class="wishlist-btn" type="button" aria-label="Add to wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="product-details">
+                            <p class="product-category">Sunglasses</p>
+                            <h3>Brown Frame Sunglasses</h3>
+                            <div class="rating">★★★★★ (4.5)</div>
+                            <p class="product-price">₹899 <del>₹1,099</del></p>
+
+                            <div class="product-buttons">
+                                <button class="add-cart" type="button">Add to Cart</button>
+                                <button class="buy-now" type="button">Buy Now</button>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- No Products Found -->
+                <div class="no-products" id="noProducts" style="display: none;">
+                    <h3>No Products Found</h3>
+                    <p>Try changing your filters.</p>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer footer" id="footer">
+
+        <div class="footer-content">
+
+            <h2>SMART SHOPPING</h2>
+
+            <p>Complete Your Look With Our Latest Accessories.</p>
+
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="men.html">Men</a>
+                <a href="woman.html">Women</a>
+                <a href="kids.html">Kids</a>
+                <a href="accessories.html">Accessories</a>
+            </div>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 SMART SHOPPING. All Rights Reserved.
+        </p>
+
+    </footer>
+
+    <script src="script.js" defer></script>
+
+</body>
+</html>
