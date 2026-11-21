@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartShopping</title>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sticky Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Smart Shopping<span>.</span></a>
+            
+            <nav class="nav-links">
+                <a href="#">Home</a>
+                <div class="dropdown">
+                    <a href="#" class="drop-btn">Shop <i class="fa-solid fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="men.html">Men's Wear</a>
+                        <a href="woman.html">Women's Wear</a>
+                        <a href="kids.html">Kids' Wear</a>
+                        <a href="accessories.html">Accessories</a>
+                    </div>
+                </div>
+                <a href="order.html">Order</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="nav-right">
+                <div class="search-box">
+                    <input type="text" placeholder="Search products...">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <a href="#" class="icon-btn"><i class="fa-regular fa-heart"></i><span class="badge">0</span></a>
+                <a href="#" class="icon-btn"><i class="fa-solid fa-bag-shopping"></i><span class="badge">0</span></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Live Auto-Sliding Hero Banner -->
+    <section class="hero-slider">
+        <!-- Slide 1 -->
+        <div class="slide active" style="background-image: linear-gradient(rgba(33, 37, 41, 0.7), rgba(33, 37, 41, 0.7)), url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1400');">
+            <div class="hero-content">
+                <h1>Timeless Elegance & Luxury</h1>
+                <p>Discover our exclusive charcoal, cream, and gold collection designed for modern living.</p>
+                <a href="#products" class="btn-gold">Shop Collection</a>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide" style="background-image: linear-gradient(rgba(33, 37, 41, 0.7), rgba(33, 37, 41, 0.7)), url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1400');">
+            <div class="hero-content">
+                <h1>New Season Arrivals 2026</h1>
+                <p>Elevate your everyday wardrobe with handcrafted statement pieces.</p>
+                <a href="#products" class="btn-gold">Explore New In</a>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide" style="background-image: linear-gradient(rgba(33, 37, 41, 0.7), rgba(33, 37, 41, 0.7)), url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=1400');">
+            <div class="hero-content">
+                <h1>Signature Gold Accessories</h1>
+                <p>Flat 20% off on selected watches and minimal jewelry this week.</p>
+                <a href="#products" class="btn-gold">Grab The Deal</a>
+            </div>
+        </div>
+
+        <!-- Next & Prev Buttons -->
+        <button class="slider-btn prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="slider-btn next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+
+        <!-- Bottom Dots -->
+        <div class="slider-dots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+        </div>
+    </section>
+
+    <!-- Collection Categories -->
+    <section class="categories container">
+        <h2>Shop By Category</h2>
+        <div class="cat-grid">
+            <div class="cat-card">
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500" alt="Apparel">
+                <div class="cat-overlay"><h3>Apparel</h3></div>
+            </div>
+            <div class="cat-card">
+                <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=500" alt="Accessories">
+                <div class="cat-overlay"><h3>Accessories</h3></div>
+            </div>
+            <div class="cat-card">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500" alt="Lifestyle">
+                <div class="cat-overlay"><h3>Lifestyle</h3></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Seller Product Grid (4-Column) -->
+    <section id="products" class="products-section container">
+        <h2>Best Sellers</h2>
+        <div class="product-grid">
+
+            <!-- Product Card 1 -->
+            <div class="product-card">
+                <div class="product-img-box">
+                    <span class="discount-badge">-20%</span>
+                    <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                    <img src="https://images.unsplash.com/photo-1701252068382-fbe79b926cdc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Product">
+                </div>
+                <div class="product-details">
+                    <span class="category-tag">Women's Wear</span>
+                    <h4>Embroidered Straight Kurti</h4>
+                    <div class="price-box">
+                        <span class="current-price">₹999.00</span>
+                        <span class="old-price">₹1200.00</span>
+                    </div>
+                    <div class="card-action-btns">
+                        <button class="btn-save">Save for Later</button>
+                        <button class="btn-buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="product-card">
+                <div class="product-img-box">
+                    <span class="discount-badge">-15%</span>
+                    <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                    <img src="https://images.unsplash.com/photo-1727430228383-aa1fb59db8bf?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Product">
+                </div>
+                <div class="product-details">
+                    <span class="category-tag">Women's Wear</span>
+                    <h4>Handloom Zari Silk Saree</h4>
+                    <div class="price-box">
+                        <span class="current-price">₹1100.00</span>
+                        <span class="old-price">₹1350</span>
+                    </div>
+                    <div class="card-action-btns">
+                        <button class="btn-save">Save for Later</button>
+                        <button class="btn-buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="product-card">
+                <div class="product-img-box">
+                    <span class="discount-badge">-30%</span>
+                    <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                    <img src="https://images.unsplash.com/photo-1760737854350-50b0620b43e0?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Product">
+                </div>
+                <div class="product-details">
+                    <span class="category-tag">Men's wear</span>
+                    <h4>Jacket & Formal pant</h4>
+                    <div class="price-box">
+                        <span class="current-price">₹1450.00</span>
+                        <span class="old-price">₹1850.00</span>
+                    </div>
+                    <div class="card-action-btns">
+                        <button class="btn-save">Save for Later</button>
+                        <button class="btn-buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 4 -->
+            <div class="product-card">
+                <div class="product-img-box">
+                    <span class="discount-badge">-10%</span>
+                    <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                    <img src="https://images.unsplash.com/photo-1611428813653-aa606c998586?q=80&w=1165&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Product">
+                </div>
+                <div class="product-details">
+                    <span class="category-tag">Kidswear</span>
+                    <h4>T-shirt & Trouser </h4>
+                    <div class="price-box">
+                        <span class="current-price">₹899.00</span>
+                        <span class="old-price">₹949.00</span>
+                    </div>
+                    <div class="card-action-btns">
+                        <button class="btn-save">Save for Later</button>
+                        <button class="btn-buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 5 -->
+            <div class="product-card">
+                <div class="product-img-box">
+                    <span class="discount-badge">-30%</span>
+                    <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                    <img src="https://images.unsplash.com/photo-1760737854350-50b0620b43e0?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Product">
+                </div>
+                <div class="product-details">
+                    <span class="category-tag">Men's wear</span>
+                    <h4>Jacket & Formal pant</h4>
+                    <div class="price-box">
+                        <span class="current-price">₹1450.00</span>
+                        <span class="old-price">₹1850.00</span>
+                    </div>
+                    <div class="card-action-btns">
+                        <button class="btn-save">Save for Later</button>
+                        <button class="btn-buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 6 -->
+            <div class="product-card">
+                <div class="product-img-box">
+                    <span class="discount-badge">-10%</span>
+                    <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                    <img src="https://images.unsplash.com/photo-1611428813653-aa606c998586?q=80&w=1165&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Product">
+                </div>
+                <div class="product-details">
+                    <span class="category-tag">Kidswear</span>
+                    <h4>T-shirt & Trouser</h4>
+                    <div class="price-box">
+                        <span class="current-price">₹899.00</span>
+                        <span class="old-price">₹949.00</span>
+                    </div>
+                    <div class="card-action-btns">
+                        <button class="btn-save">Save for Later</button>
+                        <button class="btn-buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 7 -->
+            <div class="product-card">
+                <div class="product-img-box">
+                    <span class="discount-badge">-15%</span>
+                    <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                    <img src="https://images.unsplash.com/photo-1727430228383-aa1fb59db8bf?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Product">
+                </div>
+                <div class="product-details">
+                    <span class="category-tag">Women's Wear</span>
+                    <h4>Handloom Zari Silk Saree</h4>
+                    <div class="price-box">
+                        <span class="current-price">₹1100.00</span>
+                        <span class="old-price">₹1350</span>
+                    </div>
+                    <div class="card-action-btns">
+                        <button class="btn-save">Save for Later</button>
+                        <button class="btn-buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 8 -->
+            <div class="product-card">
+                <div class="product-img-box">
+                    <span class="discount-badge">-20%</span>
+                    <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                    <img src="https://images.unsplash.com/photo-1701252068382-fbe79b926cdc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Product">
+                </div>
+                <div class="product-details">
+                    <span class="category-tag">Women's Wear</span>
+                    <h4>Embroidered Straight Kurti</h4>
+                    <div class="price-box">
+                        <span class="current-price">₹999.00</span>
+                        <span class="old-price">₹1200.00</span>
+                    </div>
+                    <div class="card-action-btns">
+                        <button class="btn-save">Save for Later</button>
+                        <button class="btn-buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 9 -->
+            <div class="product-card">
+                <div class="product-img-box">
+                    <span class="discount-badge">-15%</span>
+                    <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                    <img src="https://images.unsplash.com/photo-1727430228383-aa1fb59db8bf?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Product">
+                </div>
+                <div class="product-details">
+                    <span class="category-tag">Women's Wear</span>
+                    <h4>Handloom Zari Silk Saree</h4>
+                    <div class="price-box">
+                        <span class="current-price">₹1100.00</span>
+                        <span class="old-price">₹1350</span>
+                    </div>
+                    <div class="card-action-btns">
+                        <button class="btn-save">Save for Later</button>
+                        <button class="btn-buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 10 -->
+            <div class="product-card">
+                <div class="product-img-box">
+                    <span class="discount-badge">-20%</span>
+                    <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                    <img src="https://images.unsplash.com/photo-1701252068382-fbe79b926cdc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Product">
+                </div>
+                <div class="product-details">
+                    <span class="category-tag">Women's Wear</span>
+                    <h4>Embroidered Straight Kurti</h4>
+                    <div class="price-box">
+                        <span class="current-price">₹999.00</span>
+                        <span class="old-price">₹1200.00</span>
+                    </div>
+                    <div class="card-action-btns">
+                        <button class="btn-save">Save for Later</button>
+                        <button class="btn-buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 11 -->
+            <div class="product-card">
+                <div class="product-img-box">
+                    <span class="discount-badge">-10%</span>
+                    <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                    <img src="https://images.unsplash.com/photo-1611428813653-aa606c998586?q=80&w=1165&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Product">
+                </div>
+                <div class="product-details">
+                    <span class="category-tag">Kidswear</span>
+                    <h4>T-shirt & Trouser</h4>
+                    <div class="price-box">
+                        <span class="current-price">₹899.00</span>
+                        <span class="old-price">₹949.00</span>
+                    </div>
+                    <div class="card-action-btns">
+                        <button class="btn-save">Save for Later</button>
+                        <button class="btn-buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 12 -->
+            <div class="product-card">
+                <div class="product-img-box">
+                    <span class="discount-badge">-30%</span>
+                    <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                    <img src="https://images.unsplash.com/photo-1760737854350-50b0620b43e0?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Product">
+                </div>
+                <div class="product-details">
+                    <span class="category-tag">Men's wear</span>
+                    <h4>Jacket & Formal pant</h4>
+                    <div class="price-box">
+                        <span class="current-price">₹1450.00</span>
+                        <span class="old-price">₹1850.00</span>
+                    </div>
+                    <div class="card-action-btns">
+                        <button class="btn-save">Save for Later</button>
+                        <button class="btn-buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    
+
+<script src="home.js"></script>
+<script src="script.js"></script>
+<!-- CONTACT & SOCIAL MEDIA FOOTER -->
+<footer id="contact" class="footer">
+    <div class="footer-container container">
+        
+        <!-- Column 1: Brand Info -->
+        <div class="footer-col">
+            <a href="#" class="logo">Smart Shopping <span>.</span></a>
+            <p>Timeless elegance in Charcoal, Crafting luxury for your everyday Lifestyle.</p>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#products">Best Sellers</a></li>
+                <li><a href="#">Collections</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 3: Contact & Connect -->
+        <div class="footer-col">
+            <h4>Contact & Connect</h4>
+            <p><i class="fa-solid fa-envelope"></i> support@smartshopping.com</p>
+            <p><i class="fa-solid fa-location-dot"></i> Tanjore, Tamil Nadu</p>
+            
+            <!-- Social Media IDs -->
+            <div class="social-links">
+                <a href="https://instagram.com" target="_blank" class="social-item">
+                    <i class="fa-brands fa-instagram"></i> smartshopping_official
+                </a>
+                <a href="https://telegram.org" target="_blank" class="social-item">
+                    <i class="fa-brands fa-telegram"></i> @smartshopping_updates
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Copyright Bottom Bar -->
+    <div class="footer-bottom">
+        <p>&copy; 2026 SmartShopping. All Rights Reserved.</p>
+    </div>
+</footer>
