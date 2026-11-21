@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Complete Your Order</title>
+    <link rel="stylesheet" href="order.css">
+</head>
+
+<body>
+    <script src="order.js"></script>
+
+    <div class="topbar">⚡ Big Sale! Get Up to 70% OFF on Everything - Limited Time Only!</div>
+
+    <div class="navbar">
+        <h2>SMART SHOPPING</h2>
+        <p>Home &nbsp; Shop &nbsp; About &nbsp; Contact</p>
+    </div>
+
+    <p class="step">STEP 2 OF 2 : CHECKOUT & PAYMENT</p>
+    <h1 class="title">COMPLETE YOUR ORDER</h1>
+
+    <div class="container">
+
+        <!-- LEFT -->
+        <div class="left-box">
+            <h3>DELIVERY DETAILS</h3>
+
+            <input type="text" id="fullName" placeholder="Full Name" required>
+            <input type="text" id="mobile" placeholder="Mobile Number" required>
+            <input type="email" id="email" placeholder="Email Address" required>
+            <textarea id="address" placeholder="Delivery Address" required></textarea>
+
+            <p>Payment Method</p>
+            <!-- Chinna Dropdown Box -->
+            <select id="payment">
+                <option value="Cash on Delivery">Cash on Delivery</option>
+                <option value="Online Payment - UPI">Online Payment - UPI</option>
+                <option value="Online Payment - Card">Online Payment - Card</option>
+            </select>
+
+            <br><br>
+            <button class="confirm-btn" onclick="confirmOrder()">Submit Order -></button>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="right-box">
+            <h3>ORDER SUMMARY</h3>
+            <div id="summary"></div>
+            <hr>
+            <p>Subtotal: <span id="subtotal"></span></p>
+            <p>Shipping: Free</p>
+            <h3>Total Payable: <span id="total"></span></h3>
+            <p>🔒 Order Securely</p>
+        </div>
+
+    </div>
+
+    <!-- MELA VARA POPUP -->
+    <div id="popup" class="popup">
+        <div class="popup-box">
+            <h2>Order Placed! 🎉</h2>
+            <p id="popupText"></p>
+            <button onclick="closePopup()">OK</button>
+        </div>
+    </div>
+
+    <script src="order.js"></script>
